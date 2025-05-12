@@ -8,24 +8,11 @@
     <h1>Breast Cancer Prediction</h1>
     <p class="instructions">Enter tumor measurements from a fine needle aspirate (FNA) to predict if the tumor is Malignant or Benign. All fields are required.</p>
     <form action="/predict" method="post">
-        <h2>Mean Measurements</h2>
-        {% for feature in mean_features %}
+        <h2>Key Measurements</h2>
+        {% for feature in features %}
         <label>{{ feature.replace('_', ' ').title() }}</label>
         <input type="number" step="any" name="{{ feature }}" required>
         {% endfor %}
-
-        <h2>Error Measurements</h2>
-        {% for feature in error_features %}
-        <label>{{ feature.replace('_', ' ').title() }}</label>
-        <input type="number" step="any" name="{{ feature }}" required>
-        {% endfor %}
-
-        <h2>Worst Measurements</h2>
-        {% for feature in worst_features %}
-        <label>{{ feature.replace('_', ' ').title() }}</label>
-        <input type="number" step="any" name="{{ feature }}" required>
-        {% endfor %}
-
         <input type="submit" value="Predict">
     </form>
 </body>
