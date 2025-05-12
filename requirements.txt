@@ -1,0 +1,6 @@
+flask==2.0.1
+scikit-learn==1.6.1
+numpy
+joblib
+gunicorn==20.1.0
+werkzeug==2.0.3

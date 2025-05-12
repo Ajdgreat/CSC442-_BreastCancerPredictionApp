@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Breast Cancer Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Breast Cancer Prediction</h1>
+    <form action="/predict" method="post">
+        <label>Worst Perimeter</label>
+        <input type="number" step="any" name="worst perimeter" required>
+        <label>Mean Concave Points</label>
+        <input type="number" step="any" name="mean concave points" required>
+        <label>Worst Radius</label>
+        <input type="number" step="any" name="worst radius" required>
+        <label>Mean Perimeter</label>
+        <input type="number" step="any" name="mean perimeter" required>
+        <label>Worst Concave Points</label>
+        <input type="number" step="any" name="worst concave points" required>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
